@@ -45,32 +45,15 @@
 % Header block
 % --------------------------------------------------
 
+\newcommand{\companyheaderlogo}{
+  \includegraphics[height=10mm]{../../templates/assets/aconsult_logo.png}
+}
+
 \newcommand{\documentheader}{
-  \begin{tabular}{|p{0.22\textwidth}|p{0.48\textwidth}|p{0.25\textwidth}|}
-    \hline
-    \centering \companylogo
-    &
-    \centering
-    \textbf{\doctitle}\\
-    \docsubtitle\\[4pt]
-    \small \docproject
-
-    &
-    \small
-    \begin{tabular}{@{}ll@{}}
-      Document: & \docnumber \\
-      Revision: & \docrevision \\
-      Page:     & \thepage \\
-        \\[-4pt]
-      Prepared: & \docpreparedby \\
-      Approved: & \docapprovedby \\
-        \\[-4pt]
-      Date:     & \docrevisiondate
-
-    \end{tabular}
-    \\
-    \hline
-  \end{tabular}
+  \small
+  \textbf{\doctitle}
+  \hfill
+  \docproject\ -- Rev. \docrevision
 }
 
 % --------------------------------------------------
