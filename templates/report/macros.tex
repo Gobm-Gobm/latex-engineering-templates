@@ -34,6 +34,7 @@
 \newcommand{\docpreparedby}{}
 \newcommand{\docapprovedby}{}
 
+\newcommand{\secondarytext}[1]{\textcolor{gray!70}{#1}}
 
 % --------------------------------------------------
 % Company logo
@@ -49,11 +50,21 @@
   \includegraphics[height=10mm]{../../templates/assets/aconsult_logo.png}
 }
 
-\newcommand{\documentheader}{
+\newcommand{\documentheadercenter}{
   \small
-  \textbf{\doctitle}
-  \hfill
-  \docproject\ -- Rev. \docrevision
+  \textbf{\doctitle}\\
+  \docsubtitle\\
+  \docproject
+  \vspace*{0.10\headheight}
+}
+
+\newcommand{\documentheaderright}{
+  \small
+  \secondarytext{Rev: \docrevision}\\
+  \secondarytext{Date: \docrevisiondate}\\
+  \secondarytext{By: \docpreparedby}\\
+  \secondarytext{Appr: \docapprovedby}\\
+  \vspace*{-0.10\headheight}
 }
 
 % --------------------------------------------------
@@ -61,13 +72,14 @@
 % --------------------------------------------------
 
 \newcommand{\companyfooter}{
-  \centering
   \small
   \textbf{\companyname}\\
-  \companyaddress\ \textbullet\ 
-  \companycity\ \textbullet\ 
-  \companypostcode\ \textbullet\ 
-  TEL.: \companyphone\ \\
-  \companyemail\ \textbullet\ \companyweb
+  \secondarytext{
+    \companyaddress\ \textbullet\ 
+    \companycity\ \textbullet\ 
+    \companypostcode\ \textbullet\ 
+    TEL.: \companyphone\\
+    \companyemail\ \textbullet\ \companyweb
+  }
 }
 

@@ -1,7 +1,10 @@
 \usepackage[
   a4paper,
   includeheadfoot,
-  margin=25mm,
+  top=10mm,
+  bottom=20mm,
+  left=20mm,
+  right=15mm,
   headheight=67pt
 ]{geometry}
 
@@ -11,13 +14,13 @@
 
 % Header
 \fancyhead[L]{\companyheaderlogo}
-\fancyhead[C]{}
-\fancyhead[R]{}
+\fancyhead[C]{\documentheadercenter}
+\fancyhead[R]{\documentheaderright}
 
 \renewcommand{\headrulewidth}{0.4pt}
 
 % Footer
+\fancyfoot[C]{\companyfooter}
 \fancyfoot[R]{\small Page \thepage\ of \pageref{LastPage}}
-\fancyfoot[L]{\small \companyfooter}
 
 \renewcommand{\footrulewidth}{0.4pt}
