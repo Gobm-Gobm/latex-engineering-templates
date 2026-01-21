@@ -1,33 +1,44 @@
-% Encoding and language
+% ============================================================================
+% Encoding & Language
+% ============================================================================
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[english]{babel}
 
-% Math and symbols
-\usepackage{amsmath, amssymb}
+% ============================================================================
+% Mathematics & Symbols
+% ============================================================================
+\usepackage{amsmath}
+\usepackage{amssymb}
 
-% Graphics
+% ============================================================================
+% Graphics & Figures
+% ============================================================================
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{xcolor}
+\usepackage{float}
+
+% ============================================================================
+% Page Referencing
+% ============================================================================
+% Required for "Page X of Y" in footer
 \usepackage{lastpage}
 
-\usepackage{float}		
-
-
-
-% Hyperlinks (must be loaded late)
+% ============================================================================
+% Hyperlinks (load late)
+% ============================================================================
+% Keep links invisible for professional reports
 \usepackage[hidelinks]{hyperref}
 
-% Page layout
-%\input{../../templates/report/layout}
+% ============================================================================
+% Template Structure (externalised)
+% ============================================================================
+% Layout: margins, header/footer, spacing
 \input{../../tex-templates/setup/report/layout}
-% Custom commands
-%\input{../../templates/report/macros}
+
+% Custom macros and commands
 \input{../../tex-templates/setup/report/macros}
 
-% Select company
-%\input{../../templates/companies/aconsult_uk}
+% Company branding & metadata
 \input{../../tex-templates/setup/companies/aconsult_engineering.tex}
-
-

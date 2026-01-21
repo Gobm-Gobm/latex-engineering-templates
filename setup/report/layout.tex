@@ -1,3 +1,7 @@
+% ============================================================================
+% Page Geometry
+% ============================================================================
+% Controls margins, paper size, and header/footer inclusion
 \usepackage[
   a4paper,
   includeheadfoot,
@@ -8,26 +12,39 @@
   headheight=67pt
 ]{geometry}
 
+% ============================================================================
+% Header & Footer Layout
+% ============================================================================
+% Fancy header/footer styling
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\fancyhf{}
+\fancyhf{} % Clear all default header/footer fields
 
-% Header
+% --- Header content ---
+% These macros are defined in the company file
 \fancyhead[L]{\companyheaderlogo}
 \fancyhead[C]{\documentheadercenter}
 \fancyhead[R]{\documentheaderright}
 
 \renewcommand{\headrulewidth}{0.4pt}
 
-% Footer
+% --- Footer content ---
 \fancyfoot[C]{\companyfooter}
 \fancyfoot[R]{\small Page \thepage\ of \pageref{LastPage}}
 
 \renewcommand{\footrulewidth}{0.4pt}
 
+% ============================================================================
+% Paragraph & Spacing Rules
+% ============================================================================
+% Engineering reports usually avoid indented paragraphs
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0.8em}
 
+% ============================================================================
+% Section / Heading Formatting
+% ============================================================================
+% Only light formatting here – deeper styling belongs elsewhere
 \usepackage{titlesec}
 
 \titleformat{\paragraph}
